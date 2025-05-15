@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bodoni Moda", serif;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fdf9f3; /* light beige background */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f4f44; /* deep olive green */
+  border-radius: 10px;
+  border: 2px solid #fdf9f3; /* creates a gap effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5e6f60;
+}
