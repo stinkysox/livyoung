@@ -1,10 +1,12 @@
-import React from "react";
-import Home from "./pages/Home";
+import { Routes, Route } from "react-router-dom";
+import Home from "../src/pages/Home";
+import Testimonials from "./components/Testimonials/Testimonials";
 const App = () => {
   return (
-    <div>
-      <Home />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/testimonials" element={<Testimonials />} />
+    </Routes>
   );
 };
 

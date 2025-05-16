@@ -1,33 +1,80 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
+
+const menuItems = [
+  { label: "About us", id: "about-us" },
+  { label: "Offerings & Availability", id: "offerings" },
+  { label: "Testimonials", id: "testimonials" },
+  { label: "Vision & Philosophy", id: "vision" },
+  { label: "FAQ'S", id: "faqs" },
+  { label: "Press & Awards", id: "press" },
+  { label: "Blogs on Wedding Planning", id: "blogs" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const menuRef = useRef(null);
+  const navigate = useNavigate();
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape" && isOpen) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (isOpen && menuRef.current) {
+      menuRef.current.focus();
+    }
+  }, [isOpen]);
+
+  const handleMenuClick = (id) => {
+    setIsOpen(false);
+    if (id === "testimonials") {
+      navigate("/testimonials");
+    } else {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <>
-      <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
-        <div className="navbar-logo">LivYoung Photography</div>
+      <header className={`navbar ${scrolled ? "scrolled" : ""}`} role="banner">
+        <div className="navbar-logo">
+          <img
+            src="https://i.postimg.cc/wMBHqHP1/Beige-Minimalist-Initial-Font-Floral-Agency-Logo-pdf-page-0001.jpg"
+            alt="LivYoung Photography Logo"
+            className="logo-img"
+          />
+        </div>
+
         {!isOpen && (
           <button
             className="menu-btn"
             onClick={toggleMenu}
             aria-label="Open Menu"
+            aria-expanded={isOpen}
+            aria-controls="primary-navigation"
           >
             <FiMenu />
           </button>
@@ -42,6 +89,11 @@ const Navbar = () => {
             animate={{ left: 0 }}
             exit={{ left: "100%" }}
             transition={{ duration: 0.5 }}
+            tabIndex={-1}
+            ref={menuRef}
+            role="navigation"
+            aria-label="Primary navigation"
+            id="primary-navigation"
           >
             <motion.button
               className="menu-btn close-btn"
@@ -57,17 +109,14 @@ const Navbar = () => {
 
             <nav className="menu-content">
               <ul>
-                {[
-                  "About us",
-                  "Offerings & Availability",
-                  "Testimonials",
-                  "Vision & Philosophy",
-                  "FAQ'S",
-                  "Press & Awards",
-                  "Blogs on Wedding Planning",
-                ].map((item) => (
-                  <motion.li key={item} whileHover={{ scale: 1.1 }}>
-                    {item}
+                {menuItems.map(({ label, id }) => (
+                  <motion.li key={id} whileHover={{ scale: 1.1 }}>
+                    <button
+                      className="menu-link-btn"
+                      onClick={() => handleMenuClick(id)}
+                    >
+                      {label}
+                    </button>
                   </motion.li>
                 ))}
               </ul>
@@ -76,7 +125,7 @@ const Navbar = () => {
         )}
       </AnimatePresence>
 
-      <section className="welcome-section">
+      <section className="welcome-section" tabIndex={-1}>
         <div className="welcome-text">
           <p>WELCOME</p>
           <h1>

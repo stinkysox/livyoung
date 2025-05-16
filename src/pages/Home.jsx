@@ -11,7 +11,6 @@ const Home = () => {
       <About />
       <Stats />
       <MarqueeImages />
-      <Testimonials />
     </div>
   );
 };

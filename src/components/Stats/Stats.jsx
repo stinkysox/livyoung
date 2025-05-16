@@ -1,11 +1,11 @@
 import React from "react";
 import CountUp from "react-countup";
-import "./Stats.css"; // Create this for styling
+import "./Stats.css";
 
 const stats = [
   {
     value: 45,
-    label: "Stories Captured. Love, laughter, and a few happy tears included.",
+    label: "Stories captured. Love, laughter, and a few happy tears included.",
   },
   {
     value: 7,
@@ -15,11 +15,11 @@ const stats = [
   {
     value: 2,
     label:
-      "countries, countless love stories, timeless memories captured worldwide.",
+      "Countries, countless love stories, timeless memories captured worldwide.",
   },
   {
-    value: 7,
-    label: "",
+    value: 50,
+    label: "Happy Clients", // Optionally remove this entry if it's not needed
   },
 ];
 
@@ -32,7 +32,7 @@ const Stats = () => {
             <CountUp end={stat.value} duration={2} />+
           </h2>
           <hr />
-          <p>{stat.label}</p>
+          {stat.label && <p>{stat.label}</p>}
         </div>
       ))}
     </section>

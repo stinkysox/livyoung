@@ -8,11 +8,17 @@
   right: 0;
   background: transparent;
   z-index: 1000;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
+  transition: background 0.4s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: #3f4f44;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-logo {
@@ -21,7 +27,15 @@
   letter-spacing: 1px;
 }
 
-/* Menu Button */
+/* Logo image */
+.logo-img {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Menu Button (Hamburger & Close) */
 .menu-btn {
   background: none;
   border: none;
@@ -30,6 +44,14 @@
   cursor: pointer;
   z-index: 1200;
   position: relative;
+  padding: 0.25em;
+  line-height: 1;
+}
+
+.menu-btn:focus,
+.menu-link-btn:focus {
+  outline: 2px solid #d8a157;
+  outline-offset: 2px;
 }
 
 /* Close button inside menu overlay */
@@ -48,41 +70,54 @@
   height: 100%;
   background-color: #0d0d0d;
   color: #d8a157;
-  transition: left 0.5s ease;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1100;
-  transition: none;
 }
 
 .menu-overlay.open {
   left: 0;
 }
 
+/* Menu Content */
 .menu-content ul {
   list-style: none;
   padding: 0;
+  margin: 0;
   text-align: center;
 }
 
 .menu-content li {
-  font-size: 1.5rem;
   margin: 20px 0;
-  cursor: pointer;
-  transition: color 0.3s ease;
 }
 
-.menu-content li:hover {
+/* Using buttons inside menu */
+.menu-link-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: color 0.3s ease;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  font-family: inherit;
+}
+
+.menu-link-btn:hover,
+.menu-link-btn:focus {
   color: #ffffff;
+  outline: none;
 }
 
 /* Welcome Section */
 .welcome-section {
   height: 80vh;
-
-  background: url("https://i.pinimg.com/736x/40/1d/fd/401dfddc2f315f193c93b60689c668f0.jpg")
-    no-repeat center center/cover;
+  background: url("https://i.postimg.cc/sDRq43K7/IMG-2277.jpg") no-repeat center
+    center/cover;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -95,31 +130,39 @@
   letter-spacing: 3px;
   margin: 0;
   font-size: 0.9rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .welcome-text h1 {
   font-size: 2rem;
   margin-top: 10px;
   line-height: 1.5;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.navbar.scrolled {
-  background: #3f4f44;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  transition: background 0.4s ease, box-shadow 0.3s ease;
-}
-
-/* Responsive */
+/* Responsive styles */
 @media (min-width: 768px) {
+  .welcome-section {
+    background: url("https://i.postimg.cc/SsPqxHpV/IMG-1943.jpg") no-repeat
+      center center/cover;
+  }
   .navbar-logo {
     font-size: 1.2rem;
   }
 
-  .menu-content li {
+  .menu-link-btn {
     font-size: 2rem;
+    padding: 15px 30px;
   }
 
   .welcome-text h1 {
     font-size: 2.5rem;
+    color: #d8a157;
+  }
+
+  .welcome-text p {
+    color: #d8a157;
   }
 }

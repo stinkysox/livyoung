@@ -7,55 +7,45 @@ const MarqueeImages = () => {
   const categories = {
     "Right Images": [
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/24/3a/f3/243af3f924ab6846b1f2095af85bfed6.jpg",
+        imageUrl: "https://i.postimg.cc/BbDWQ6pQ/IMG-2279.jpg",
         category: "Right Images",
       },
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/f2/f9/4b/f2f94b92e1048b45b372db321e042bce.jpg",
+        imageUrl: "https://i.postimg.cc/VNTHrwdS/IMG-2106.jpg",
         category: "Right Images",
       },
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/f1/0f/22/f10f22327238583e66859a6514e4d62e.jpg",
+        imageUrl: "https://i.postimg.cc/rsg14GQh/424A6781.jpg",
         category: "Right Images",
       },
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/b7/43/ef/b743ef4649354cd5a45fcfe0f0609afb.jpg",
+        imageUrl: "https://i.postimg.cc/mDyCxNfb/IMG-0981.jpg",
         category: "Right Images",
       },
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/05/38/c2/0538c243c1d3599fd7c37f81fdae7384.jpg",
+        imageUrl: "https://i.postimg.cc/5tMXxYmj/IMG-0982.jpgg",
         category: "Right Images",
       },
     ],
     "Left Images": [
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/50/36/08/50360859203a51e5de8e30e934ab856d.jpg",
+        imageUrl: "https://i.postimg.cc/PqLSk72d/IMG-2052-2.jpg",
         category: "Left Images",
       },
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/55/a0/42/55a042ffebaf73b4367b0e78f3c5b08e.jpg",
+        imageUrl: "https://i.postimg.cc/7PQb5QNF/IMG-1244.jpg",
         category: "Left Images",
       },
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/32/de/7c/32de7c6dea7a32733bbc4792dcde506e.jpg",
+        imageUrl: "https://i.postimg.cc/Yq593GZ8/IMG-1248.jpg",
         category: "Left Images",
       },
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/5b/c5/e1/5bc5e1d1222c8c1d1aee9094140ba0ac.jpg",
+        imageUrl: "https://i.postimg.cc/SsPqxHpV/IMG-1943.jpg",
         category: "Left Images",
       },
       {
-        imageUrl:
-          "https://i.pinimg.com/736x/58/e7/9f/58e79f5f30226747fdb75e3db34d9a4a.jpg",
+        imageUrl: "https://i.postimg.cc/sDRq43K7/IMG-2277.jpg",
         category: "Left Images",
       },
     ],
@@ -83,7 +73,7 @@ const MarqueeImages = () => {
   };
 
   return (
-    <>
+    <div className="marquee-section">
       <div className="marquee-container">
         <Marquee
           speed={50}
@@ -105,7 +95,18 @@ const MarqueeImages = () => {
           {renderImages(leftArrowImages, "left")}
         </Marquee>
       </div>
-    </>
+
+      <div className="instagram-button-container">
+        <a
+          href="https://www.instagram.com/livyoungphotography/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="instagram-button"
+        >
+          FOLLOW LIVYOUNG ON INSTAGRAM
+        </a>
+      </div>
+    </div>
   );
 };
 
