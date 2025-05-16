@@ -59,15 +59,12 @@ const Navbar = () => {
               <ul>
                 {[
                   "About us",
-                  "The Vows Experience",
                   "Offerings & Availability",
-                  "Reviews",
+                  "Testimonials",
                   "Vision & Philosophy",
                   "FAQ'S",
                   "Press & Awards",
-                  "Wedding Podcast",
                   "Blogs on Wedding Planning",
-                  "Collaborations",
                 ].map((item) => (
                   <motion.li key={item} whileHover={{ scale: 1.1 }}>
                     {item}
