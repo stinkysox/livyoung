@@ -88,3 +88,20 @@
   color: #777;
   margin: 0;
 }
+
+.star-rating {
+  margin-top: 0.5rem;
+  color: #fbc02d; /* Golden yellow */
+  display: flex;
+  gap: 4px;
+  font-size: 1rem;
+  justify-content: center;
+}
+
+.star-icon {
+  transition: transform 0.3s ease;
+}
+
+.star-icon:hover {
+  transform: scale(1.1);
+}

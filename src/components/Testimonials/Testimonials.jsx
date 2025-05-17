@@ -4,6 +4,7 @@ import "./Testimonials.css";
 import { FaQuoteLeft } from "react-icons/fa";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import { FaStar } from "react-icons/fa";
 
 const testimonials = [
   {
@@ -130,6 +131,14 @@ const Testimonials = () => {
               >
                 <FaQuoteLeft className="quote-icon" />
                 <p className="testimonial-text">"{testimonial.quote}"</p>
+
+                {/* Star rating */}
+                <div className="star-rating">
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar key={i} className="star-icon" />
+                  ))}
+                </div>
+
                 <div className="testimonial-user">
                   <div>
                     <h4 className="user-name">{testimonial.name}</h4>

@@ -16,6 +16,16 @@
   font-weight: 600;
   color: #5f4b32;
 }
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+  color: #555;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* Categories container */
 .categories-container {
@@ -28,7 +38,7 @@
   white-space: nowrap;
   justify-content: flex-start;
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 165, 0, 0.7) rgba(255, 255, 255, 0.1);
+  scrollbar-color: #3f4f44 rgba(255, 255, 255, 0.1);
 }
 
 .categories-container::-webkit-scrollbar {

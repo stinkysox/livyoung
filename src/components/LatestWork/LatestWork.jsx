@@ -230,6 +230,13 @@ const LatestWork = () => {
       <Navbar welcomeConfig={galleryWelcomePackage} />
       <div className="latestwork-container" id="latestwork">
         <h1>Latest Work</h1>
+        <p className="intro-text">
+          "At <strong>LivYoung Photography</strong>, we specialize in capturing
+          authentic, emotion-filled moments that last a lifetime. Whether it’s a
+          wedding, corporate event, maternity shoot, or personal portrait
+          session, our experienced team ensures each frame reflects the essence
+          of your story with unmatched creativity and professionalism".
+        </p>
         <div className="categories-container">
           {categories.map((category) => (
             <button

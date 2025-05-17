@@ -6,25 +6,52 @@ import {
   FaPinterestP,
   FaYoutube,
 } from "react-icons/fa";
-import { PiXLogoBold } from "react-icons/pi"; // For the "X" (Twitter) icon
+import { PiXLogoBold } from "react-icons/pi"; // For X (Twitter)
 
 const Footer = () => {
   return (
     <footer className="footer-container">
-      <h2 className="footer-title">Livyoung Photography</h2>
+      <h2 className="footer-title">LivYoung Photography</h2>
+
+      <p className="footer-tagline">
+        Celebrating life’s most meaningful moments through storytelling frames.
+      </p>
 
       <p className="footer-note">
-        1000+ transformed lives since 2015, © 2025, livyoung photography
+        Trusted by over 1000 clients • Weddings · Rituals · Portraits · Cultural
+        Events
       </p>
-      <p className="footer-contact">hello@livyoung.com | +91 7799099943</p>
+
+      <p className="footer-contact">
+        <strong>Get in Touch:</strong> hello@livyoung.com | +91 77990 99943
+      </p>
+
+      <p className="footer-address">
+        Based in Hyderabad · Available for travel across India and
+        internationally
+      </p>
 
       <div className="footer-socials">
-        <FaFacebookF />
-        <PiXLogoBold />
-        <FaInstagram />
-        <FaPinterestP />
-        <FaYoutube />
+        <a href="#" aria-label="Facebook">
+          <FaFacebookF />
+        </a>
+        <a href="#" aria-label="Twitter / X">
+          <PiXLogoBold />
+        </a>
+        <a href="#" aria-label="Instagram">
+          <FaInstagram />
+        </a>
+        <a href="#" aria-label="Pinterest">
+          <FaPinterestP />
+        </a>
+        <a href="#" aria-label="YouTube">
+          <FaYoutube />
+        </a>
       </div>
+
+      <p className="footer-copyright">
+        © 2025 LivYoung Photography · All Rights Reserved
+      </p>
     </footer>
   );
 };
