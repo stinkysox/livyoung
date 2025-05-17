@@ -6,20 +6,31 @@ import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 const menuItems = [
-  { label: "About us", id: "about-us" },
-  { label: "Offerings & Availability", id: "offerings" },
+  { label: "Home", id: "/" },
+  { label: "About us", id: "about" },
+  { label: "Gallery", id: "gallery" },
+
+  { label: "Explore Packages", id: "packages" },
   { label: "Testimonials", id: "testimonials" },
-  { label: "Vision & Philosophy", id: "vision" },
-  { label: "FAQ'S", id: "faqs" },
-  { label: "Press & Awards", id: "press" },
-  { label: "Blogs on Wedding Planning", id: "blogs" },
+  { label: "Films", id: "films" },
 ];
 
-const Navbar = () => {
+const Navbar = ({ welcomeConfig }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef(null);
   const navigate = useNavigate();
+
+  // Default welcome configuration
+  const defaultWelcomeConfig = {
+    backgroundImage: "https://i.postimg.cc/HWK26PX1/IMG-2281.jpg", // Default background (or you can set a default image)
+    title: "We're So Happy You're Here!",
+    subtitle: "WELCOME",
+    showWelcome: true,
+  };
+
+  // Merge default config with passed config
+  const finalWelcomeConfig = { ...defaultWelcomeConfig, ...welcomeConfig };
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
@@ -47,8 +58,14 @@ const Navbar = () => {
 
   const handleMenuClick = (id) => {
     setIsOpen(false);
-    if (id === "testimonials") {
+    if (id === "/") {
+      navigate("/");
+    } else if (id === "testimonials") {
       navigate("/testimonials");
+    } else if (id === "packages") {
+      navigate("/packages");
+    } else if (id === "gallery") {
+      navigate("/gallery");
     } else {
       const el = document.getElementById(id);
       if (el) {
@@ -125,14 +142,39 @@ const Navbar = () => {
         )}
       </AnimatePresence>
 
-      <section className="welcome-section" tabIndex={-1}>
-        <div className="welcome-text">
-          <p>WELCOME</p>
-          <h1>
-            We're So Happy <br /> You're Here!
-          </h1>
-        </div>
-      </section>
+      {/* Conditional Welcome Section */}
+      {finalWelcomeConfig.showWelcome && (
+        <section
+          className="welcome-section"
+          tabIndex={-1}
+          style={{
+            backgroundImage: finalWelcomeConfig.backgroundImage
+              ? `url(${finalWelcomeConfig.backgroundImage})`
+              : "none",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <div className="welcome-text">
+            <p>{finalWelcomeConfig.subtitle}</p>
+            <h1>
+              {finalWelcomeConfig.title.includes("<br />")
+                ? finalWelcomeConfig.title
+                    .split("<br />")
+                    .map((part, index) => (
+                      <React.Fragment key={index}>
+                        {part}
+                        {index <
+                          finalWelcomeConfig.title.split("<br />").length -
+                            1 && <br />}
+                      </React.Fragment>
+                    ))
+                : finalWelcomeConfig.title}
+            </h1>
+          </div>
+        </section>
+      )}
     </>
   );
 };

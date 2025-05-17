@@ -17,7 +17,7 @@ const fadeInUp = {
 
 const About = () => {
   return (
-    <section className="about-section">
+    <section className="about-section" id="about">
       <motion.div
         className="about-left"
         initial="hidden"

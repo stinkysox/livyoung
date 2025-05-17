@@ -1,0 +1,371 @@
+.packages-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: "Georgia", serif;
+  color: #8b7355;
+  line-height: 1.6;
+}
+
+.package-section {
+  margin-bottom: 4rem;
+  background: #faf8f5;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(139, 115, 85, 0.1);
+}
+
+.package-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+  align-items: center;
+}
+
+.package-section.reverse .package-content {
+  grid-template-columns: 1fr 1fr;
+}
+
+.package-image {
+  height: 100%;
+  overflow: hidden;
+}
+
+.package-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.package-text {
+  padding: 3rem;
+  background: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.package-category {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #a0916b;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.package-title {
+  font-size: 2.5rem;
+  font-style: italic;
+  color: #8b7355;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.package-subtitle {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #a0916b;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.package-description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #6b5d4f;
+}
+
+.package-features h3 {
+  font-size: 1.2rem;
+  color: #8b7355;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.package-features ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.package-features li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #6b5d4f;
+}
+
+.package-features li::before {
+  content: "•";
+  color: #a0916b;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.package-price {
+  font-size: 1.1rem;
+  color: #8b7355;
+  font-style: italic;
+  border-top: 1px solid #e8e0d6;
+  padding-top: 1.5rem;
+  margin-top: auto;
+}
+
+.add-ons-note {
+  color: #8b7355;
+  font-style: italic;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.process-section {
+  padding: 120px 20px;
+  background-color: #f8f6f3;
+  min-height: auto;
+}
+
+.process-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.process-main-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #8b7355;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+
+.process-main-subtitle {
+  font-size: 1.2rem;
+  color: #a49080;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.process-step {
+  background: white;
+  padding: 50px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(139, 115, 85, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.step-content {
+  position: relative;
+  z-index: 2;
+}
+
+.step-number {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #a49080;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.step-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #8b7355;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.step-subtitle {
+  display: block;
+  font-size: 1.1rem;
+  color: #a49080;
+  font-style: italic;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+
+.step-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #5a4a3a;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.step-additional-info {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #7a6a5a;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.step-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #8b7355, #a49080);
+  transform-origin: left;
+}
+
+.package-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #3f4f44;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.btn-secondary:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .packages-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .package-content,
+  .package-section.reverse .package-content {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .package-section.reverse .package-content {
+    grid-template-areas:
+      "image"
+      "text";
+  }
+
+  .package-section.reverse .package-image {
+    grid-area: image;
+  }
+
+  .package-section.reverse .package-text {
+    grid-area: text;
+  }
+
+  .package-text {
+    padding: 2rem 1.5rem;
+  }
+
+  .package-title {
+    font-size: 2rem;
+  }
+
+  .package-description {
+    font-size: 1rem;
+  }
+
+  .package-image {
+    height: 300px;
+  }
+
+  .package-section {
+    margin-bottom: 2rem;
+  }
+
+  .process-section {
+    padding: 80px 15px;
+  }
+
+  .process-main-title {
+    font-size: 2.5rem;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .process-step {
+    padding: 40px 30px;
+  }
+
+  .step-title {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .process-section {
+    padding: 60px 10px;
+  }
+
+  .process-main-title {
+    font-size: 2rem;
+  }
+
+  .process-step {
+    padding: 30px 25px;
+  }
+
+  .step-title {
+    font-size: 1.5rem;
+  }
+
+  .package-text {
+    padding: 1.5rem 1rem;
+  }
+
+  .package-title {
+    font-size: 1.8rem;
+  }
+
+  .package-image {
+    height: 250px;
+  }
+}
+
+/* Accessibility focus state */
+.package-section:focus-within {
+  outline: 2px solid #a0916b;
+  outline-offset: 4px;
+}

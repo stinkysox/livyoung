@@ -116,22 +116,31 @@
 /* Welcome Section */
 .welcome-section {
   height: 80vh;
-  background: url("https://i.postimg.cc/sDRq43K7/IMG-2277.jpg") no-repeat center
-    center/cover;
+
   display: flex;
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 80px;
   text-align: center;
   color: white;
+  position: relative;
+}
+
+.welcome-text {
+  position: absolute;
+  bottom: 30px; /* adjust as needed to avoid cutting off */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 }
 
 .welcome-text p {
   letter-spacing: 3px;
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-family: "Playfair Display", serif;
 }
 
 .welcome-text h1 {
@@ -140,14 +149,11 @@
   line-height: 1.5;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-family: "Playfair Display", serif;
 }
 
 /* Responsive styles */
 @media (min-width: 768px) {
-  .welcome-section {
-    background: url("https://i.postimg.cc/SsPqxHpV/IMG-1943.jpg") no-repeat
-      center center/cover;
-  }
   .navbar-logo {
     font-size: 1.2rem;
   }
@@ -155,14 +161,5 @@
   .menu-link-btn {
     font-size: 2rem;
     padding: 15px 30px;
-  }
-
-  .welcome-text h1 {
-    font-size: 2.5rem;
-    color: #d8a157;
-  }
-
-  .welcome-text p {
-    color: #d8a157;
   }
 }

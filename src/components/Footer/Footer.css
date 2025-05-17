@@ -1,0 +1,31 @@
+.footer-container {
+  background-color: #f9f6f1;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #8c5c3e;
+  font-family: "Playfair Display", serif;
+  margin-top: 50px;
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-description,
+.footer-note,
+.footer-contact,
+.footer-tagline {
+  font-size: 0.8rem;
+  margin: 0.3rem 0;
+  line-height: 1.6;
+}
+
+.footer-socials {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  font-size: 1.2rem;
+}
