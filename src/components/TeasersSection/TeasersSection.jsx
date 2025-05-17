@@ -12,13 +12,7 @@ const TeasersSection = () => {
     showWelcome: true,
   };
 
-  const videos = [
-    "https://www.youtube.com/embed/IMohdHhdrmo",
-    "https://www.youtube.com/embed/ardtvdR28SQ",
-    "https://www.youtube.com/embed/IBFWlwnrpdU",
-    "https://www.youtube.com/embed/3ppE8JcZoX0",
-    "https://www.youtube.com/embed/k1gj5wCLAhc",
-  ];
+  const videos = ["https://www.youtube.com/embed/4mBO9gceg4M"];
 
   return (
     <>
@@ -55,7 +49,7 @@ const TeasersSection = () => {
 
         <div className="youtube-icon">
           <a
-            href="https://www.youtube.com/@your_channel"
+            href="https://www.youtube.com/@livyoungphotography"
             target="_blank"
             rel="noopener noreferrer"
           >
