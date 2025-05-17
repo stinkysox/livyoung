@@ -286,7 +286,7 @@ const LatestWork = () => {
               >
                 <img src={selectedImage} alt="Selected work" />
                 <a
-                  href="https://www.instagram.com/shwetapoojaryphotos/"
+                  href="https://www.instagram.com/livyoungphotography/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="instagram-link"
