@@ -17,7 +17,6 @@ const Footer = () => {
         1000+ transformed lives since 2015, © 2025, livyoung photography
       </p>
       <p className="footer-contact">hello@livyoung.com | +91 7799099943</p>
-      <p className="footer-tagline">Strongly supporting holistic living</p>
 
       <div className="footer-socials">
         <FaFacebookF />
