@@ -409,7 +409,7 @@ const Packages = () => {
             rel="noopener noreferrer"
             className="btn-primary"
           >
-            Book Your Event With Us
+            Book Event With Us
           </a>
           <a
             href="https://www.instagram.com/livyoungphotography"

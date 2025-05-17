@@ -11,9 +11,8 @@ import { PiXLogoBold } from "react-icons/pi"; // For the "X" (Twitter) icon
 const Footer = () => {
   return (
     <footer className="footer-container">
-      <h2 className="footer-title">LivYoung</h2>
+      <h2 className="footer-title">Livyoung Photography</h2>
 
-      <p className="footer-description">Photography</p>
       <p className="footer-note">
         1000+ transformed lives since 2015, © 2025, livyoung photography
       </p>
