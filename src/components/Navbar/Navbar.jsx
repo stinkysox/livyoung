@@ -12,7 +12,7 @@ const menuItems = [
 
   { label: "Explore Packages", id: "packages" },
   { label: "Testimonials", id: "testimonials" },
-  { label: "Films", id: "films" },
+  { label: "Films", id: "teasers" },
 ];
 
 const Navbar = ({ welcomeConfig }) => {
@@ -66,6 +66,8 @@ const Navbar = ({ welcomeConfig }) => {
       navigate("/packages");
     } else if (id === "gallery") {
       navigate("/gallery");
+    } else if (id === "teasers") {
+      navigate("/teasers");
     } else {
       const el = document.getElementById(id);
       if (el) {
