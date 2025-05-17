@@ -13,6 +13,7 @@ const menuItems = [
   { label: "Explore Packages", id: "packages" },
   { label: "Testimonials", id: "testimonials" },
   { label: "Films", id: "teasers" },
+  { label: "Book Appointment", id: "booknow" },
 ];
 
 const Navbar = ({ welcomeConfig }) => {
@@ -58,6 +59,7 @@ const Navbar = ({ welcomeConfig }) => {
 
   const handleMenuClick = (id) => {
     setIsOpen(false);
+
     if (id === "/") {
       navigate("/");
     } else if (id === "testimonials") {
@@ -68,6 +70,8 @@ const Navbar = ({ welcomeConfig }) => {
       navigate("/gallery");
     } else if (id === "teasers") {
       navigate("/teasers");
+    } else if (id === "booknow") {
+      navigate("/booknow");
     } else {
       const el = document.getElementById(id);
       if (el) {
