@@ -85,6 +85,8 @@ const Navbar = ({ welcomeConfig }) => {
           />
         </div>
 
+        <p>Livyoung Photography</p>
+
         {!isOpen && (
           <button
             className="menu-btn"
