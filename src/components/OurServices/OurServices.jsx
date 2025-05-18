@@ -58,10 +58,14 @@ const OurServices = () => {
     <>
       <Navbar welcomeConfig={outServiceswelcome} />
       <div className="our-services" id="services">
-        <p className="subheading">OUR SERVICES</p>
         <h2 className="main-heading">
           Where every <span>picture</span> <br /> tells a story
         </h2>
+        <p className="services-description">
+          Livyoung Photography is versatile and dedicated to capturing every
+          kind of event—be it weddings, baby showers, birthdays, or fashion
+          shoots—with unmatched professionalism and creative flair.
+        </p>
 
         <div className="services-grid">
           {services.map((service, index) => (
