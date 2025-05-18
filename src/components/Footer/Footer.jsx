@@ -18,13 +18,10 @@ const Footer = () => {
       </p>
 
       <p className="footer-note">
-        Trusted by over 1000 clients • Weddings · Rituals · Portraits · Cultural
-        Events
+        • Weddings · Rituals · Portraits · Cultural Events
       </p>
 
-      <p className="footer-contact">
-        <strong>Get in Touch:</strong> hello@livyoung.com | +91 77990 99943
-      </p>
+      <p className="footer-contact">hello@livyoung.com | +91 77990 99943</p>
 
       <p className="footer-address">
         Based in Hyderabad · Available for travel across India and

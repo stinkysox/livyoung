@@ -35,7 +35,7 @@ const testimonials = [
     name: "Meera Krishnan",
     role: "Fashion Blogger",
     quote:
-      "Working with LivYoung was effortless. She brings out the best angles and moods in every shoot!",
+      "Working with LivYoung was effortless. They brings out the best angles and moods in every shoot!",
   },
   {
     name: "Dr. Rohini Shankar",
@@ -47,7 +47,7 @@ const testimonials = [
     name: "Siddharth Raghavan",
     role: "Musician",
     quote:
-      "She captured the soul of our Carnatic concert without interrupting the flow — incredible attention to detail.",
+      "They captured the soul of our Carnatic concert without interrupting the flow — incredible attention to detail.",
   },
   {
     name: "Lakshmi Balakrishnan",
