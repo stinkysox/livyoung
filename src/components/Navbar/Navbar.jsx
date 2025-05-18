@@ -9,6 +9,7 @@ const menuItems = [
   { label: "Home", id: "/" },
   { label: "About us", id: "about" },
   { label: "Gallery", id: "gallery" },
+  { label: "Services", id: "services" },
 
   { label: "Explore Packages", id: "packages" },
   { label: "Testimonials", id: "testimonials" },
@@ -72,6 +73,8 @@ const Navbar = ({ welcomeConfig }) => {
       navigate("/teasers");
     } else if (id === "booknow") {
       navigate("/booknow");
+    } else if (id === "services") {
+      navigate("/services");
     } else {
       const el = document.getElementById(id);
       if (el) {

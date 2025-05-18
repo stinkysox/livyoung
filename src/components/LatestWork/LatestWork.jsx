@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaInstagram } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import "./LatestWork.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
@@ -250,7 +250,6 @@ const LatestWork = () => {
             </button>
           ))}
         </div>
-
         {!imagesLoaded ? (
           <div className="loading">Loading images...</div>
         ) : (
@@ -274,7 +273,6 @@ const LatestWork = () => {
             ))}
           </motion.div>
         )}
-
         <AnimatePresence>
           {selectedImage && (
             <motion.div
@@ -310,7 +308,6 @@ const LatestWork = () => {
             </motion.div>
           )}
         </AnimatePresence>
-
         <motion.div
           className="package-buttons"
           initial={{ opacity: 0, y: 20 }}
@@ -321,20 +318,21 @@ const LatestWork = () => {
             href="https://wa.me/917799099943"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary"
+            className="btn-icon whatsapp"
+            title="Chat on WhatsApp"
           >
-            Book Your Event With Us
+            <FaWhatsapp size={24} />
           </a>
           <a
             href="https://www.instagram.com/livyoungphotography"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary"
+            className="btn-icon instagram"
+            title="View on Instagram"
           >
-            Learn More
+            <FaInstagram size={24} />
           </a>
         </motion.div>
-
         <Footer />
       </div>
     </>

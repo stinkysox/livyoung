@@ -2,7 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "../Navbar/Navbar"; // Adjust the import path as needed
 import "./Packages.css";
-import Footer from "../Footer/Footer"; // Adjust the import path as needed
+import Footer from "../Footer/Footer";
+import { FaWhatsapp, FaInstagram } from "react-icons/fa";
+// Adjust the import path as needed
 
 const Packages = () => {
   // Custom welcome configuration for packages page
@@ -84,7 +86,6 @@ const Packages = () => {
         items: [
           "Customized Music Scores",
           "Handcrafted Albums",
-          "360° VR Videos",
           "Same day On Site Editing",
           "Fast Track Delivery within 30 days.",
         ],
@@ -401,23 +402,25 @@ const Packages = () => {
           className="package-buttons"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1 }}
+          transition={{ delay: 0.2 }}
         >
           <a
             href="https://wa.me/917799099943"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary"
+            className="btn-icon whatsapp"
+            title="Chat on WhatsApp"
           >
-            Book Event With Us
+            <FaWhatsapp size={24} />
           </a>
           <a
             href="https://www.instagram.com/livyoungphotography"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary"
+            className="btn-icon instagram"
+            title="View on Instagram"
           >
-            Learn More
+            <FaInstagram size={24} />
           </a>
         </motion.div>
 
